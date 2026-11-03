@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bwmiq5fxsjnjw"]
+
+[ext_resource type="Texture2D" uid="uid://e0ctig6hdusd" path="res://bird.png" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://wvosby34qrgb" path="res://main.gd" id="1_lgr22"]
+[ext_resource type="Texture2D" uid="uid://ddvhik3ldpeiu" path="res://background.png" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://fh14qmejdgau" path="res://bird.gd" id="2_fos0i"]
+[ext_resource type="FontFile" uid="uid://cxmk4hf73sbau" path="res://Minecraft.ttf" id="2_lgr22"]
+[ext_resource type="Texture2D" uid="uid://cbsxq5ot4cisk" path="res://overlay.png" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://cbs04vdwdtegc" path="res://pipe.tscn" id="6_3dxm6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(858, 48.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uu6xs"]
+load_path = "res://.godot/imported/pause.png-fae43b08edb08fdf891c9b1e11f62ed7.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(99, 74)
+
+[node name="Node2D" type="Node2D" unique_id=412975793]
+script = ExtResource("1_lgr22")
+Minecraft = ExtResource("2_lgr22")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=835131270]
+position = Vector2(362.25003, 640.49994)
+scale = Vector2(2.4948277, 2.66875)
+texture = ExtResource("1_uu6xs")
+
+[node name="Pipe" parent="." unique_id=1815598568 instance=ExtResource("6_3dxm6")]
+position = Vector2(635, 138)
+
+[node name="GroundOverlay" type="Sprite2D" parent="." unique_id=1835244662]
+position = Vector2(359, 1148.25)
+scale = Vector2(2.5034482, 2.7222223)
+texture = ExtResource("4_cm0pq")
+
+[node name="DeathZone" type="StaticBody2D" parent="." unique_id=186326825]
+
+[node name="BottomDeathBox" type="CollisionShape2D" parent="DeathZone" unique_id=673383504]
+position = Vector2(385, 1040.75)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="TopDeathBox" type="CollisionShape2D" parent="DeathZone" unique_id=724924706]
+position = Vector2(361, -21)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=2126100958]
+top_level = true
+offset_left = 45.0
+offset_top = 43.0
+offset_right = 118.0
+offset_bottom = 121.0
+texture_normal = SubResource("CompressedTexture2D_uu6xs")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PauseButton" unique_id=1298179707]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Bird" type="CharacterBody2D" parent="." unique_id=542662320]
+top_level = true
+script = ExtResource("2_fos0i")
+
+[node name="BirdSprite" type="Sprite2D" parent="Bird" unique_id=1614151573]
+position = Vector2(235, 606)
+scale = Vector2(5.794118, 6.1666665)
+texture = ExtResource("1_glv2v")
+
+[node name="BirdCollision" type="CollisionShape2D" parent="Bird" unique_id=1307258961]
+position = Vector2(234.5, 606)
+shape = SubResource("RectangleShape2D_xrivr")

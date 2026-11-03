@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cbs04vdwdtegc"]
+
+[ext_resource type="Script" uid="uid://du6vxdd7qwlun" path="res://pipe.gd" id="1_78010"]
+[ext_resource type="Texture2D" uid="uid://crctgrpe001b4" path="res://pipe.png" id="2_arayy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
+size = Vector2(175, 458)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78010"]
+load_path = "res://.godot/imported/pipe.png-8b6450e58984ceca4e95639df940417c.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njqwk"]
+size = Vector2(22, 279.5)
+
+[node name="Pipe" type="Area2D" unique_id=1815598568]
+script = ExtResource("1_78010")
+
+[node name="top" type="CollisionShape2D" parent="." unique_id=1215089107]
+position = Vector2(17, -94)
+shape = SubResource("RectangleShape2D_b1lj4")
+
+[node name="Sprite2D" type="Sprite2D" parent="top" unique_id=1526496950]
+position = Vector2(2.026558e-06, -78.25003)
+scale = Vector2(7.0275006, 7.4817076)
+texture = SubResource("CompressedTexture2D_78010")
+
+[node name="bottom" type="CollisionShape2D" parent="." unique_id=795969834]
+position = Vector2(10, 646)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_b1lj4")
+
+[node name="Sprite2D" type="Sprite2D" parent="bottom" unique_id=980906684]
+position = Vector2(2.026558e-06, -103.032486)
+scale = Vector2(7.0275006, 8.086158)
+texture = ExtResource("2_arayy")
+
+[node name="ScoreZone" type="Area2D" parent="." unique_id=1562121303]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreZone" unique_id=1507390113]
+position = Vector2(114, 275)
+shape = SubResource("RectangleShape2D_njqwk")
