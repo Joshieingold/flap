@@ -26,17 +26,17 @@ position = Vector2(450.75003, 640.49994)
 scale = Vector2(3.1051724, 2.66875)
 texture = ExtResource("1_uu6xs")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636793890]
+position = Vector2(498.24994, 1631)
+scale = Vector2(3.453448, 11.457072)
+texture = ExtResource("4_cm0pq")
+
 [node name="Pipe" parent="." unique_id=1815598568 instance=ExtResource("6_3dxm6")]
 position = Vector2(635, 138)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636793890]
-position = Vector2(360.24997, 1631)
-scale = Vector2(2.501724, 11.457072)
-texture = ExtResource("4_cm0pq")
-
 [node name="GroundOverlay" type="Sprite2D" parent="." unique_id=1835244662]
-position = Vector2(359, 1148.25)
-scale = Vector2(2.5034482, 2.7222223)
+position = Vector2(524, 1148.25)
+scale = Vector2(3.641379, 2.7222223)
 texture = ExtResource("4_cm0pq")
 
 [node name="DeathZone" type="StaticBody2D" parent="." unique_id=186326825]
