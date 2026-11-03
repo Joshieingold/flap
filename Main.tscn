@@ -22,12 +22,17 @@ script = ExtResource("1_lgr22")
 Minecraft = ExtResource("2_lgr22")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=835131270]
-position = Vector2(362.25003, 640.49994)
-scale = Vector2(2.4948277, 2.66875)
+position = Vector2(450.75003, 640.49994)
+scale = Vector2(3.1051724, 2.66875)
 texture = ExtResource("1_uu6xs")
 
 [node name="Pipe" parent="." unique_id=1815598568 instance=ExtResource("6_3dxm6")]
 position = Vector2(635, 138)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636793890]
+position = Vector2(360.24997, 1631)
+scale = Vector2(2.501724, 11.457072)
+texture = ExtResource("4_cm0pq")
 
 [node name="GroundOverlay" type="Sprite2D" parent="." unique_id=1835244662]
 position = Vector2(359, 1148.25)
@@ -52,11 +57,6 @@ offset_right = 118.0
 offset_bottom = 121.0
 texture_normal = SubResource("CompressedTexture2D_uu6xs")
 stretch_mode = 0
-
-[node name="Label" type="Label" parent="PauseButton" unique_id=1298179707]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Bird" type="CharacterBody2D" parent="." unique_id=542662320]
 top_level = true
